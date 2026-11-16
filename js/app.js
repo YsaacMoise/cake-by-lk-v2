@@ -35,7 +35,7 @@
   var DOUCEURS = [['sables', 'Sablés', 'sablé'], ['cupcakes', 'Cupcakes', 'cupcake'], ['popcakes', 'Popcakes', 'popcake']];
   var gateauxPour = function (f) { return f === 'Anniversaire' ? ['layer', 'number'] : f === 'Mariage' ? ['wedding'] : f ? ['layer'] : []; };
 
-  var etat = { fete: '', gateau: '', parts: '', partsPlus: '', chiffre: '', invites: '', saveur: '', modele: null, themeCarte: false, sables: 0, cupcakes: 0, popcakes: 0 };
+  var etat = { fete: '', gateau: '', parts: '', partsPlus: '', chiffre: '', invites: '', saveur: '', modele: null, themeAuto: '', themeCarte: false, sables: 0, cupcakes: 0, popcakes: 0 };
 
   /* ---------- En-tête, menu du téléphone ---------- */
   var entete = $('#entete'), menuBtn = $('#menuBtn'), menu = $('#menu');
@@ -199,12 +199,14 @@
     var src = imageAtelier();
     if (apercu.getAttribute('src') !== src) {
       apercu.classList.add('sort');
-      setTimeout(function () { apercu.setAttribute('src', src); requestAnimationFrame(function () { apercu.classList.remove('sort'); }); }, reduit ? 0 : 300);
+      setTimeout(function () { apercu.setAttribute('src', src); apercu.classList.toggle('pose', src.indexOf('theme-') > -1); requestAnimationFrame(function () { apercu.classList.remove('sort'); }); }, reduit ? 0 : 300);
     }
+    majRecap();
     annonce.textContent = p.devis ? 'Prix donné dans ma réponse.' : p.total ? 'Prix de départ : ' + p.total + ' euros.' : '';
   }
 
   function rendre() {
+    erreur.textContent = '';
     var zF = $('#choixFete'); zF.innerHTML = '';
     FETES.forEach(function (f) { zF.appendChild(puce(f, f === etat.fete, null, function () { choisirFete(f); })); });
 
@@ -301,49 +303,67 @@
     $$('.compteur', z).forEach(function (l, i) { $('output', l).textContent = etat[DOUCEURS[i][0]]; });
   }
 
+  /* Le thème suit le modèle : un nouveau modèle remplace le thème qu'il avait rempli ; un thème écrit par la cliente reste. */
+  function oublierThemeAuto() {
+    var th = $('#theme');
+    if (etat.themeAuto && th.value.trim() === etat.themeAuto) th.value = '';
+    etat.themeAuto = '';
+  }
+  function oublierModele() { etat.modele = null; oublierThemeAuto(); }
+  /* Un modèle reste tant qu'il va avec la fête et le gâteau : un gâteau à thème va avec toutes les fêtes sauf le mariage. */
+  function modeleCompatible() {
+    var m = etat.modele; if (!m) return true;
+    var feteOk = m.fete === '*' ? etat.fete !== 'Mariage' : m.fete === etat.fete;
+    return feteOk && (!etat.gateau || m.gateau === etat.gateau);
+  }
   function choisirFete(f) {
     etat.fete = f;
     var gs = gateauxPour(f);
     if (gs.indexOf(etat.gateau) < 0) { etat.gateau = gs.length === 1 ? gs[0] : ''; etat.parts = ''; etat.saveur = ''; }
-    if (etat.modele && etat.modele.gateau !== etat.gateau) etat.modele = null;
+    if (!modeleCompatible()) oublierModele();
     if (f !== 'Anniversaire') etat.themeCarte = false;
     rendre(); sauver();
   }
   function choisirGateau(g) {
     if (etat.gateau !== g) { etat.parts = ''; etat.saveur = ''; }
     etat.gateau = g;
-    if (etat.modele && etat.modele.gateau !== g) etat.modele = null;
+    if (!modeleCompatible()) oublierModele();
     rendre(); sauver();
   }
-  function retirerModele() {
-    if (etat.modele && etat.modele.theme && $('#theme').value === etat.modele.nom) $('#theme').value = '';
-    etat.modele = null; rendre(); sauver();
-  }
+  function retirerModele() { oublierModele(); rendre(); sauver(); }
   $('#modeleRetirer').addEventListener('click', retirerModele);
 
-  /* Depuis les occasions et la galerie */
+  /* Depuis les occasions et la galerie : le formulaire se remplit, puis la page va à la première question sans réponse */
   $$('.carte[data-fete], .devis [data-fete]').forEach(function (c) {
-    c.addEventListener('click', function () {
-      etat.modele = null; etat.themeCarte = c.getAttribute('data-theme') === 'oui';
+    c.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      oublierModele(); etat.themeCarte = c.getAttribute('data-theme') === 'oui';
       etat.fete = c.getAttribute('data-fete');
       var g = c.getAttribute('data-gateau'); if (etat.gateau !== g) { etat.parts = ''; etat.saveur = ''; } etat.gateau = g;
-      rendre(); sauver();
+      rendre(); sauver(); allerSuite();
     });
   });
   $$('.tuile').forEach(function (t) {
     t.addEventListener('click', function () {
-      var g = t.getAttribute('data-gateau');
+      var g = t.getAttribute('data-gateau'), theme = t.getAttribute('data-theme') === 'oui', fete = t.getAttribute('data-fete');
+      oublierModele();
       if (etat.gateau !== g) { etat.parts = ''; etat.saveur = ''; }
-      var ancien = etat.modele;
-      etat.modele = { nom: t.getAttribute('data-nom'), img: t.getAttribute('data-img'), gateau: g, theme: t.getAttribute('data-theme') === 'oui' };
-      etat.gateau = g; etat.fete = t.getAttribute('data-fete'); etat.themeCarte = false;
+      etat.modele = { nom: t.getAttribute('data-nom'), img: t.getAttribute('data-img'), gateau: g, theme: theme, fete: theme ? '*' : fete };
+      etat.gateau = g; etat.fete = fete; etat.themeCarte = false;
+      var ch = t.getAttribute('data-chiffre'); if (ch) etat.chiffre = ch;
       var th = $('#theme');
-      if (ancien && ancien.theme && th.value === ancien.nom) th.value = '';
-      if (etat.modele.theme && !th.value) th.value = etat.modele.nom;
-      rendre(); sauver();
-      defiler($('#composer'));
+      if (theme && !th.value.trim()) { th.value = etat.modele.nom; etat.themeAuto = etat.modele.nom; }
+      rendre(); sauver(); allerSuite();
     });
   });
+  /* Amène la visiteuse à la première question sans réponse, focus compris */
+  function allerSuite() {
+    var m = manque(), etape = m ? $(m[1]) : $('#recap'), cible = m ? $(m[2]) : $('#preparer');
+    if (!etape || etape.hidden) etape = $('#form');
+    etape.scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'start' });
+    var foc = cible && (cible.matches('input, button') ? cible : $('button, input', cible));
+    if (foc) setTimeout(function () { foc.focus({ preventScroll: true }); }, reduit ? 0 : 700);
+  }
 
   /* ---------- Date : pas de date passée ---------- */
   var dateIn = $('#date'), auj = new Date();
@@ -366,26 +386,43 @@
       CHAMPS.forEach(function (id) { if (s.champs && s.champs[id]) $('#' + id).value = s.champs[id]; });
     } catch (e) { /* rien */ }
   }
-  CHAMPS.forEach(function (id) { $('#' + id).addEventListener('input', sauver); });
+  CHAMPS.forEach(function (id) { $('#' + id).addEventListener('input', function () { erreur.textContent = ''; majRecap(); sauver(); }); });
+
+  /* ---------- Le récapitulatif, repris tel quel dans le message ---------- */
+  function lignesRecap() {
+    var v = function (id) { return $('#' + id).value.trim(); };
+    return [
+      ['Modèle', etat.modele ? GATEAUX[etat.modele.gateau].l + ' « ' + etat.modele.nom + ' »' : ''],
+      ['Fête', etat.fete], ['Gâteau', descGateau()],
+      [etat.gateau === 'number' ? 'Garniture' : 'Saveur', etat.saveur],
+      [etat.gateau === 'number' ? 'Prénom sur la plaque' : 'Texte sur le gâteau', v('texte')],
+      ['Thème ou personnage', etat.gateau === 'layer' ? v('theme') : ''],
+      ['Idées de décor', v('idees')], ['Douceurs', listeDouceurs()], ['Date de la fête', dateLongue()],
+      ['Allergies ou régime', v('allergies')]
+    ].filter(function (l) { return l[1]; });
+  }
+  function majRecap() {
+    var r = $('#recapListe'); if (!r) return;
+    var L = lignesRecap();
+    r.innerHTML = '';
+    L.forEach(function (l) { var dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = l[0]; dd.textContent = l[1]; r.appendChild(dt); r.appendChild(dd); });
+    $('#recap').hidden = !etat.fete;
+    var p = prix(), t = p.devis ? 'Prix dans ma réponse' : p.total ? 'À partir de ' + euros(p.total) : etat.gateau === 'wedding' ? 'À partir de 5 € la part' : '';
+    $('#recapPrix').textContent = t; $('#barrePrix').textContent = t || 'Votre gâteau';
+    var mi = $('#recapImg'); mi.hidden = !etat.modele; if (etat.modele) mi.src = etat.modele.img.replace('-900', '-480');
+  }
 
   /* ---------- Le message ---------- */
   function dateLongue() { return dateIn.value ? new Date(dateIn.value + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : ''; }
   function listeDouceurs() { return DOUCEURS.filter(function (d) { return etat[d[0]] > 0; }).map(function (d) { return pluriel(etat[d[0]], d[2], d[2] + 's'); }).join(', '); }
   function texteMessage(ref) {
-    var p = prix(), L = [], v = function (id) { return $('#' + id).value.trim(); };
+    var p = prix(), L = [];
     L.push('Bonjour,', 'Voici ma demande ' + ref + ' :', '');
-    if (etat.modele) L.push('Modèle vu sur le site : ' + GATEAUX[etat.modele.gateau].l + ' « ' + etat.modele.nom + ' »');
-    L.push('Fête : ' + etat.fete, 'Gâteau : ' + descGateau());
-    if (etat.saveur) L.push((etat.gateau === 'number' ? 'Garniture : ' : 'Saveur : ') + etat.saveur);
-    if (v('texte')) L.push((etat.gateau === 'number' ? 'Prénom sur la plaque : ' : 'Texte sur le gâteau : ') + v('texte'));
-    if (v('theme') && etat.gateau === 'layer') L.push('Thème ou personnage : ' + v('theme'));
-    if (v('idees')) L.push('Idées de décor : ' + v('idees'));
-    if (listeDouceurs()) L.push('Douceurs : ' + listeDouceurs());
-    L.push('Date de la fête : ' + dateLongue());
-    if (v('allergies')) L.push('Allergies ou régime : ' + v('allergies'));
+    lignesRecap().forEach(function (l) { L.push(l[0] + ' : ' + l[1]); });
     if (p.devis) L.push('Prix : à me donner dans votre réponse');
     else if (p.total) L.push('Prix de départ indiqué sur le site : à partir de ' + euros(p.total) + (p.note && etat.gateau === 'number' ? ' (nombre à deux chiffres : prix à confirmer)' : ''));
-    L.push('', 'De la part de : ' + v('nom') + (v('tel') ? ' · Téléphone : ' + v('tel') : ''), '', 'Merci !');
+    var nom = $('#nom').value.trim(), tel = $('#tel').value.trim();
+    L.push('', 'De la part de : ' + nom + (tel ? ' · Téléphone : ' + tel : ''), '', 'Merci !');
     return L.join('\n');
   }
   function copier(t) {
@@ -423,9 +460,9 @@
     ref = ref || 'LK-' + Date.now().toString(36).slice(-5).toUpperCase();
     var t = texteMessage(ref);
     $('#messageTexte').textContent = t;
-    boite.classList.add('vis');
+    boite.classList.add('vis'); majBarre();
     copier(t).then(function (ok) {
-      $('#copieInfo').textContent = ok ? 'Il est copié. Ouvrez Instagram, collez-le dans notre conversation et envoyez-le-moi. Ajoutez votre photo modèle si vous en avez une.' : 'Copiez le message ci-dessous, collez-le dans Instagram et envoyez-le-moi. Ajoutez votre photo modèle si vous en avez une.';
+      $('#copieInfo').textContent = ok ? 'Il est copié. Ouvrez Instagram, collez-le et envoyez-le-moi. Ajoutez votre photo modèle si vous en avez une.' : 'Copiez le message ci-dessous, collez-le dans Instagram et envoyez-le-moi. Ajoutez votre photo modèle si vous en avez une.';
       $('#recopier').textContent = ok ? 'Copier à nouveau' : 'Copier le message';
     });
     boite.focus({ preventScroll: true });
@@ -434,6 +471,17 @@
   $('#recopier').addEventListener('click', function () {
     copier($('#messageTexte').textContent).then(function (ok) { $('#recopier').textContent = ok ? 'Message copié' : 'Sélectionnez le texte pour le copier'; });
   });
+
+  /* ---------- Téléphone : le prix et l'action restent à portée de pouce pendant la composition ---------- */
+  var barre = $('#barre'), vu = { composer: false, envoi: false, saisie: false };
+  function majBarre() { barre.classList.toggle('vis', vu.composer && !vu.envoi && !vu.saisie && !$('#message').classList.contains('vis') && !!etat.fete); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { vu.composer = e[0].isIntersecting; majBarre(); }, { threshold: 0 }).observe($('#form'));
+    new IntersectionObserver(function (e) { vu.envoi = e[0].isIntersecting; majBarre(); }, { threshold: 0 }).observe($('#envoi'));
+  }
+  document.addEventListener('focusin', function (e) { vu.saisie = e.target.matches('input, textarea'); majBarre(); });
+  document.addEventListener('focusout', function () { vu.saisie = false; majBarre(); });
+  $('#barreBtn').addEventListener('click', function () { if (form.requestSubmit) form.requestSubmit(); else $('#preparer').click(); });
 
   charger();
   rendre();
