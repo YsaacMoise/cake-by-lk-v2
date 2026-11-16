@@ -79,7 +79,7 @@
   function majHero() {
     var p = progres(hero), e = lisse(clamp(p / 0.8, 0, 1));
     var vw = window.innerWidth / 100, vh = window.innerHeight / 100;
-    var tx = tel() ? 0 : e * 13 * vw, ty = tel() ? -e * 13 * vh : e * 2 * vh, sc = 1 - (tel() ? .26 : .12) * e;
+    var tx = tel() ? 0 : e * 13 * vw, ty = tel() ? -e * 15 * vh : e * 4 * vh, sc = 1 - (tel() ? .36 : .24) * e;
     gateau.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(' + sc + ')';
     var f = clamp(1 - e * 1.8, 0, 1);
     l1.style.opacity = f; l2.style.opacity = f;
@@ -118,12 +118,24 @@
     voirPlus.hidden = ouvert || reste <= 0;
     voirPlus.textContent = reste === 1 ? 'Voir l’autre gâteau' : 'Voir les ' + reste + ' autres gâteaux';
   }
-  function f2(li) { return filtre === 'tous' ? li.getAttribute('data-f') !== 'mariage' || li.getAttribute('data-id') !== 'devis' : li.getAttribute('data-f') === filtre; }
+  function f2(li) { return filtre === 'tous' || li.getAttribute('data-f') === filtre; }
+  function choisirFiltre(f) {
+    filtre = f; ouvert = false;
+    $$('.filtres .puce').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-filtre') === f ? 'true' : 'false'); });
+    var fz = $('.filtres'), act = $('.filtres .puce[aria-pressed="true"]');
+    if (fz && act && fz.scrollWidth > fz.clientWidth) fz.scrollLeft = act.offsetLeft - fz.offsetLeft - (fz.clientWidth - act.offsetWidth) / 2;
+    majGalerie();
+  }
   $$('.filtres .puce').forEach(function (b) {
-    b.addEventListener('click', function () {
-      filtre = b.getAttribute('data-filtre'); ouvert = false;
-      $$('.filtres .puce').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      majGalerie();
+    b.addEventListener('click', function () { choisirFiltre(b.getAttribute('data-filtre')); });
+  });
+  /* Une occasion ouvre ses gâteaux dans la galerie */
+  $$('.carte[data-cat]').forEach(function (c) {
+    c.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      choisirFiltre(c.getAttribute('data-cat'));
+      $('#creations').scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'start' });
+      var p = $('.filtres .puce[aria-pressed="true"]'); if (p) setTimeout(function () { p.focus({ preventScroll: true }); }, reduit ? 0 : 700);
     });
   });
   voirPlus.addEventListener('click', function () {
@@ -181,7 +193,7 @@
     if (etat.fete === 'Baby shower ou gender reveal') return 'img/g2/naissance-maman-900.webp';
     if (etat.fete === 'Tahara') return 'img/g2/tahara-costume-900.webp';
     if (etat.themeCarte) return 'img/g2/theme-licorne-900.webp';
-    return 'img/g2/anniv-geode-900.webp';
+    return 'img/g2/anniv-pluie-900.webp';
   }
   var apercu = $('#apercu');
   function majPrix() {
@@ -332,16 +344,7 @@
   function retirerModele() { oublierModele(); rendre(); sauver(); }
   $('#modeleRetirer').addEventListener('click', retirerModele);
 
-  /* Depuis les occasions et la galerie : le formulaire se remplit, puis la page va à la première question sans réponse */
-  $$('.carte[data-fete], .devis [data-fete]').forEach(function (c) {
-    c.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      oublierModele(); etat.themeCarte = c.getAttribute('data-theme') === 'oui';
-      etat.fete = c.getAttribute('data-fete');
-      var g = c.getAttribute('data-gateau'); if (etat.gateau !== g) { etat.parts = ''; etat.saveur = ''; } etat.gateau = g;
-      rendre(); sauver(); allerSuite();
-    });
-  });
+  /* Depuis la galerie : le formulaire se remplit, puis la page va à la première question sans réponse */
   $$('.tuile').forEach(function (t) {
     t.addEventListener('click', function () {
       var g = t.getAttribute('data-gateau'), theme = t.getAttribute('data-theme') === 'oui', fete = t.getAttribute('data-fete');
