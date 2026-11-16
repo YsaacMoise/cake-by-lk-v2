@@ -79,7 +79,7 @@
   function majHero() {
     var p = progres(hero), e = lisse(clamp(p / 0.8, 0, 1));
     var vw = window.innerWidth / 100, vh = window.innerHeight / 100;
-    var tx = tel() ? 0 : e * 20 * vw, ty = tel() ? -e * 12 * vh : 0, sc = 1 - .34 * e;
+    var tx = tel() ? 0 : e * 13 * vw, ty = tel() ? -e * 13 * vh : e * 2 * vh, sc = 1 - (tel() ? .26 : .12) * e;
     gateau.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(' + sc + ')';
     var f = clamp(1 - e * 1.8, 0, 1);
     l1.style.opacity = f; l2.style.opacity = f;
@@ -181,7 +181,7 @@
     if (etat.fete === 'Baby shower ou gender reveal') return 'img/g/baby-shower-900.webp';
     if (etat.fete === 'Tahara') return 'img/g/tahara-900.webp';
     if (etat.themeCarte) return 'img/g/theme-licorne-900.webp';
-    return 'img/g/anniv-fruits-rouges-900.webp';
+    return 'img/g/anniv-chocolats-900.webp';
   }
   var apercu = $('#apercu');
   function majPrix() {
@@ -313,8 +313,7 @@
   /* Un modèle reste tant qu'il va avec la fête et le gâteau : un gâteau à thème va avec toutes les fêtes sauf le mariage. */
   function modeleCompatible() {
     var m = etat.modele; if (!m) return true;
-    var feteOk = m.fete === '*' ? etat.fete !== 'Mariage' : m.fete === etat.fete;
-    return feteOk && (!etat.gateau || m.gateau === etat.gateau);
+    return gateauxPour(etat.fete).indexOf(m.gateau) > -1 && (!etat.gateau || m.gateau === etat.gateau);
   }
   function choisirFete(f) {
     etat.fete = f;
@@ -348,11 +347,15 @@
       var g = t.getAttribute('data-gateau'), theme = t.getAttribute('data-theme') === 'oui', fete = t.getAttribute('data-fete');
       oublierModele();
       if (etat.gateau !== g) { etat.parts = ''; etat.saveur = ''; }
-      etat.modele = { nom: t.getAttribute('data-nom'), img: t.getAttribute('data-img'), gateau: g, theme: theme, fete: theme ? '*' : fete };
-      etat.gateau = g; etat.fete = fete; etat.themeCarte = false;
+      // Un modèle d'une fête précise (tahara, baby shower, mariage) prend sa fête. Un modèle d'anniversaire s'adapte
+      // à la fête déjà choisie si elle accepte ce gâteau (« Je l'adapte à votre fête »).
+      if (fete !== 'Anniversaire' || gateauxPour(etat.fete).indexOf(g) < 0) etat.fete = fete;
+      etat.modele = { nom: t.getAttribute('data-nom'), img: t.getAttribute('data-img'), gateau: g, theme: theme };
+      etat.gateau = g; etat.themeCarte = false;
       var ch = t.getAttribute('data-chiffre'); if (ch) etat.chiffre = ch;
+      // Le nom du modèle remplit le thème des layer cakes, sauf si la cliente y a déjà écrit le sien.
       var th = $('#theme');
-      if (theme && !th.value.trim()) { th.value = etat.modele.nom; etat.themeAuto = etat.modele.nom; }
+      if (g === 'layer' && !th.value.trim()) { th.value = etat.modele.nom; etat.themeAuto = etat.modele.nom; }
       rendre(); sauver(); allerSuite();
     });
   });
