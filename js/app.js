@@ -175,8 +175,8 @@
   }
   function imageAtelier() {
     if (etat.modele) return etat.modele.img;
-    if (!etat.fete && !etat.gateau) return 'img/g2/number-duo-900.webp';
-    if (etat.gateau === 'number') return 'img/g2/number-duo-900.webp';
+    if (!etat.fete && !etat.gateau) return 'img/g2/number-fraises-900.webp';
+    if (etat.gateau === 'number') return 'img/g2/number-fraises-900.webp';
     if (etat.gateau === 'wedding' || etat.fete === 'Mariage') return 'img/g2/mariage-date-900.webp';
     if (etat.fete === 'Baby shower ou gender reveal') return 'img/g2/naissance-maman-900.webp';
     if (etat.fete === 'Tahara') return 'img/g2/tahara-costume-900.webp';
