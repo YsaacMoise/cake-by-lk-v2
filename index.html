@@ -59,22 +59,22 @@
     </div>
     <div class="rail">
       <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="layer">
-        <span class="visuel"><img src="img/g/anniv-chocolats-480.webp" srcset="img/g/anniv-chocolats-480.webp 480w, img/g/anniv-chocolats-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
+        <span class="visuel"><img src="img/g2/anniv-geode-480.webp" srcset="img/g2/anniv-geode-480.webp 480w, img/g2/anniv-geode-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
         <span class="num">01 · Anniversaire</span>
         <span class="ligne-bas"><span class="nom">Layer cake</span><span class="prix">dès 75 €</span></span>
       </a>
       <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="number">
-        <span class="visuel"><img src="img/g/number-50-480.webp" srcset="img/g/number-50-480.webp 480w, img/g/number-50-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
+        <span class="visuel"><img src="img/g2/number-duo-480.webp" srcset="img/g2/number-duo-480.webp 480w, img/g2/number-duo-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
         <span class="num">02 · Un chiffre</span>
         <span class="ligne-bas"><span class="nom">Number cake</span><span class="prix">dès 30 €</span></span>
       </a>
       <a href="#composer" class="carte" data-fete="Mariage" data-gateau="wedding">
-        <span class="visuel"><img src="img/g/mariage-agrumes-480.webp" srcset="img/g/mariage-agrumes-480.webp 480w, img/g/mariage-agrumes-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
+        <span class="visuel"><img src="img/g2/mariage-date-480.webp" srcset="img/g2/mariage-date-480.webp 480w, img/g2/mariage-date-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
         <span class="num">03 · Mariage</span>
         <span class="ligne-bas"><span class="nom">Wedding cake</span><span class="prix">dès 5 € la part</span></span>
       </a>
       <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="layer" data-theme="oui">
-        <span class="visuel"><img src="img/g/theme-licorne-480.webp" srcset="img/g/theme-licorne-480.webp 480w, img/g/theme-licorne-900.webp 861w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
+        <span class="visuel"><img src="img/g2/theme-licorne-480.webp" srcset="img/g2/theme-licorne-480.webp 480w, img/g2/theme-licorne-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="600"></span>
         <span class="num">04 · Votre personnage</span>
         <span class="ligne-bas"><span class="nom">À thème</span><span class="prix">dès 75 €</span></span>
       </a>
@@ -88,177 +88,186 @@
     </div>
     <div class="filtres" role="group" aria-label="Choisir une occasion">
       <button type="button" class="puce" data-filtre="tous" aria-pressed="true">Tous</button>
-      <button type="button" class="puce" data-filtre="anniversaire" aria-pressed="false">Anniversaires et fêtes</button>
+      <button type="button" class="puce" data-filtre="anniversaire" aria-pressed="false">Anniversaires</button>
       <button type="button" class="puce" data-filtre="theme" aria-pressed="false">À thème</button>
       <button type="button" class="puce" data-filtre="mariage" aria-pressed="false">Mariages</button>
+      <button type="button" class="puce" data-filtre="number" aria-pressed="false">Number cakes</button>
+      <button type="button" class="puce" data-filtre="naissance" aria-pressed="false">Naissance</button>
+      <button type="button" class="puce" data-filtre="tahara" aria-pressed="false">Tahara</button>
     </div>
     <ul class="galerie" id="galerie">
-      <li data-f="mariage" data-id="mariage-suspendu" data-r-tous="0" data-r-mariage="1">
-        <button type="button" class="tuile" data-nom="L’étage suspendu" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-suspendu-900.webp">
-          <span class="visuel"><img src="img/g/mariage-suspendu-480.webp" srcset="img/g/mariage-suspendu-480.webp 480w, img/g/mariage-suspendu-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc dont l’étage du haut est suspendu au-dessus des fleurs" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">L’étage suspendu</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="anniversaire" data-id="anniv-geode" data-r-tous="0" data-r-anniversaire="0">
+        <button type="button" class="tuile" data-nom="La géode framboise" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g2/anniv-geode-900.webp">
+          <span class="visuel"><img src="img/g2/anniv-geode-480.webp" srcset="img/g2/anniv-geode-480.webp 480w, img/g2/anniv-geode-900.webp 900w, img/g2/anniv-geode-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, géode de sucre bordée d’or, roses fraîches, prénom doré au pied" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La géode framboise</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="number-18" data-r-tous="4" data-r-anniversaire="2">
-        <button type="button" class="tuile" data-nom="Le 18 gourmand" data-gateau="number" data-fete="Anniversaire" data-theme="" data-chiffre="18" data-img="img/g/number-18-900.webp">
-          <span class="visuel"><img src="img/g/number-18-480.webp" srcset="img/g/number-18-480.webp 480w, img/g/number-18-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 18, fruits rouges d’un côté, chocolats de l’autre" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Le 18 gourmand</span><span class="prix">Number cake, dès 30 €</span></span>
-        </button>
-      </li>
-      <li data-f="anniversaire" data-id="anniv-ahlem" data-r-tous="1" data-r-anniversaire="1">
-        <button type="button" class="tuile" data-nom="Clin d’œil" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g/anniv-ahlem-900.webp">
-          <span class="visuel"><img src="img/g/anniv-ahlem-480.webp" srcset="img/g/anniv-ahlem-480.webp 480w, img/g/anniv-ahlem-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc décoré d’un visage maquillé, rouge à lèvres et pivoines" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+      <li data-f="anniversaire" data-id="anniv-clin" data-r-tous="6" data-r-anniversaire="1">
+        <button type="button" class="tuile" data-nom="Clin d’œil" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g2/anniv-clin-900.webp">
+          <span class="visuel"><img src="img/g2/anniv-clin-480.webp" srcset="img/g2/anniv-clin-480.webp 480w, img/g2/anniv-clin-900.webp 900w, img/g2/anniv-clin-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc décoré d’un visage maquillé, rouge à lèvres et pivoines" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
           <span class="bas"><span class="nom">Clin d’œil</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-stitch" data-r-tous="3" data-r-theme="0">
-        <button type="button" class="tuile" data-nom="Stitch" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-stitch-900.webp">
-          <span class="visuel"><img src="img/g/theme-stitch-480.webp" srcset="img/g/theme-stitch-480.webp 480w, img/g/theme-stitch-900.webp 841w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake bleu, Stitch, coquillages et étoiles de mer, prénoms dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Stitch</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="anniversaire" data-id="anniv-pluie" data-r-tous="7" data-r-anniversaire="2">
+        <button type="button" class="tuile" data-nom="Pluie de chocolat" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g2/anniv-pluie-900.webp">
+          <span class="visuel"><img src="img/g2/anniv-pluie-480.webp" srcset="img/g2/anniv-pluie-480.webp 480w, img/g2/anniv-pluie-900.webp 900w, img/g2/anniv-pluie-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, chocolat coulant, Kinder, Ferrero et pot de Nutella sur le dessus" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Pluie de chocolat</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="baby-shower" data-r-tous="2" data-r-anniversaire="3">
-        <button type="button" class="tuile" data-nom="Future maman" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-chiffre="" data-img="img/g/baby-shower-900.webp">
-          <span class="visuel"><img src="img/g/baby-shower-480.webp" srcset="img/g/baby-shower-480.webp 480w, img/g/baby-shower-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau blanc, silhouette de femme enceinte dessinée en doré, roses roses et blanches" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Future maman</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="anniversaire" data-id="anniv-corail" data-r-tous="8" data-r-anniversaire="3">
+        <button type="button" class="tuile" data-nom="Bouquet corail" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g2/anniv-corail-900.webp">
+          <span class="visuel"><img src="img/g2/anniv-corail-480.webp" srcset="img/g2/anniv-corail-480.webp 480w, img/g2/anniv-corail-900.webp 900w, img/g2/anniv-corail-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, roses fuchsia et orange, touches de peinture, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Bouquet corail</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="mariage" data-id="mariage-agrumes" data-r-mariage="0">
-        <button type="button" class="tuile" data-nom="Citron et fleurs jaunes" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-agrumes-900.webp">
-          <span class="visuel"><img src="img/g/mariage-agrumes-480.webp" srcset="img/g/mariage-agrumes-480.webp 480w, img/g/mariage-agrumes-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, initiales dorées, fleurs jaunes et tranches de citron" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Citron et fleurs jaunes</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="anniversaire" data-id="anniv-tour" data-r-tous="9" data-r-anniversaire="4">
+        <button type="button" class="tuile" data-nom="La tour gourmande" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g2/anniv-tour-900.webp">
+          <span class="visuel"><img src="img/g2/anniv-tour-480.webp" srcset="img/g2/anniv-tour-480.webp 480w, img/g2/anniv-tour-900.webp 900w, img/g2/anniv-tour-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake à deux étages, crème praliné, chocolat coulant, Kinder et meringues" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La tour gourmande</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="anniv-oceane" data-r-anniversaire="4">
-        <button type="button" class="tuile" data-nom="Deux roses blanches" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g/anniv-oceane-900.webp">
-          <span class="visuel"><img src="img/g/anniv-oceane-480.webp" srcset="img/g/anniv-oceane-480.webp 480w, img/g/anniv-oceane-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, roses blanches sur le dessus, inscription dorée" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Deux roses blanches</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="mariage" data-id="mariage-date" data-r-tous="1" data-r-mariage="0">
+        <button type="button" class="tuile" data-nom="La date couronnée" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-date-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-date-480.webp" srcset="img/g2/mariage-date-480.webp 480w, img/g2/mariage-date-900.webp 900w, img/g2/mariage-date-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake crème à deux étages, date dans une couronne dorée, initiales, fleurs blanches" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La date couronnée</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-spiderman" data-r-theme="1">
-        <button type="button" class="tuile" data-nom="Spider-Man" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-spiderman-900.webp">
-          <span class="visuel"><img src="img/g/theme-spiderman-480.webp" srcset="img/g/theme-spiderman-480.webp 480w, img/g/theme-spiderman-900.webp 747w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, Spider-Man, araignées et toiles, prénom écrit en noir" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Spider-Man</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="mariage" data-id="mariage-grenat" data-r-tous="10" data-r-mariage="1">
+        <button type="button" class="tuile" data-nom="Grenat et ivoire" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-grenat-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-grenat-480.webp" srcset="img/g2/mariage-grenat-480.webp 480w, img/g2/mariage-grenat-900.webp 900w, img/g2/mariage-grenat-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake à trois étages, roses rouges et blanches, prénoms dorés, feuille d’or" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Grenat et ivoire</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="mariage" data-id="mariage-sb" data-r-mariage="2">
-        <button type="button" class="tuile" data-nom="L’étage de roses" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-sb-900.webp">
-          <span class="visuel"><img src="img/g/mariage-sb-480.webp" srcset="img/g/mariage-sb-480.webp 480w, img/g/mariage-sb-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à quatre étages, étage transparent rempli de roses blanches, initiales dorées" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">L’étage de roses</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="mariage" data-id="mariage-bleuroi" data-r-tous="11" data-r-mariage="2">
+        <button type="button" class="tuile" data-nom="Bleu roi" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-bleuroi-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-bleuroi-480.webp" srcset="img/g2/mariage-bleuroi-480.webp 480w, img/g2/mariage-bleuroi-900.webp 900w, img/g2/mariage-bleuroi-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, roses bleues, rubans bleus, prénoms et date dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Bleu roi</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="mariage" data-id="mariage-nassim-cassandra" data-r-mariage="3">
-        <button type="button" class="tuile" data-nom="Roses rouges et blanches" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-nassim-cassandra-900.webp">
-          <span class="visuel"><img src="img/g/mariage-nassim-cassandra-480.webp" srcset="img/g/mariage-nassim-cassandra-480.webp 480w, img/g/mariage-nassim-cassandra-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à trois étages, roses rouges et blanches, prénoms dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Roses rouges et blanches</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="mariage" data-id="mariage-coton" data-r-tous="12" data-r-mariage="3">
+        <button type="button" class="tuile" data-nom="Le champ de coton" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-coton-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-coton-480.webp" srcset="img/g2/mariage-coton-480.webp 480w, img/g2/mariage-coton-900.webp 900w, img/g2/mariage-coton-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake à cinq étages, fleurs de coton, fleurs séchées, prénoms et date dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le champ de coton</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="anniv-brina" data-r-anniversaire="5">
-        <button type="button" class="tuile" data-nom="Éclats d’or" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g/anniv-brina-900.webp">
-          <span class="visuel"><img src="img/g/anniv-brina-480.webp" srcset="img/g/anniv-brina-480.webp 480w, img/g/anniv-brina-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc à deux étages, feuille d’or, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Éclats d’or</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="mariage" data-id="mariage-citron" data-r-tous="13" data-r-mariage="4">
+        <button type="button" class="tuile" data-nom="L’éclat citron" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-citron-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-citron-480.webp" srcset="img/g2/mariage-citron-480.webp 480w, img/g2/mariage-citron-900.webp 900w, img/g2/mariage-citron-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, fleurs jaunes, tranches de citron, initiales dorées" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">L’éclat citron</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-minnie" data-r-theme="2">
-        <button type="button" class="tuile" data-nom="Minnie" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-minnie-900.webp">
-          <span class="visuel"><img src="img/g/theme-minnie-480.webp" srcset="img/g/theme-minnie-480.webp 480w, img/g/theme-minnie-900.webp 733w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, Minnie et nœud rose, prénom en noir" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Minnie</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="mariage" data-id="mariage-suspendu" data-r-tous="14" data-r-mariage="5">
+        <button type="button" class="tuile" data-nom="L’étage suspendu" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g2/mariage-suspendu-900.webp">
+          <span class="visuel"><img src="img/g2/mariage-suspendu-480.webp" srcset="img/g2/mariage-suspendu-480.webp 480w, img/g2/mariage-suspendu-900.webp 900w, img/g2/mariage-suspendu-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc dont l’étage du haut semble suspendu, gypsophile, initiales dorées" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">L’étage suspendu</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="number-50" data-r-anniversaire="7">
-        <button type="button" class="tuile" data-nom="Le 50 aux fruits rouges" data-gateau="number" data-fete="Anniversaire" data-theme="" data-chiffre="50" data-img="img/g/number-50-900.webp">
-          <span class="visuel"><img src="img/g/number-50-480.webp" srcset="img/g/number-50-480.webp 480w, img/g/number-50-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 50, crème, fruits rouges et chocolat blanc" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Le 50 aux fruits rouges</span><span class="prix">Number cake, dès 30 €</span></span>
+      <li data-f="theme" data-id="theme-licorne" data-r-tous="2" data-r-theme="0">
+        <button type="button" class="tuile" data-nom="La licorne arc-en-ciel" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-licorne-900.webp">
+          <span class="visuel"><img src="img/g2/theme-licorne-480.webp" srcset="img/g2/theme-licorne-480.webp 480w, img/g2/theme-licorne-900.webp 900w, img/g2/theme-licorne-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau licorne rose à deux étages, corne et cils dorés, arcs-en-ciel et papillons" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La licorne arc-en-ciel</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="anniv-angelina" data-r-anniversaire="0">
-        <button type="button" class="tuile" data-nom="Géodes roses" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g/anniv-angelina-900.webp">
-          <span class="visuel"><img src="img/g/anniv-angelina-480.webp" srcset="img/g/anniv-angelina-480.webp 480w, img/g/anniv-angelina-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, géodes roses bordées d’or, roses et framboises, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Géodes roses</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-pandas" data-r-tous="15" data-r-theme="1">
+        <button type="button" class="tuile" data-nom="Les pandas du bambou" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-pandas-900.webp">
+          <span class="visuel"><img src="img/g2/theme-pandas-480.webp" srcset="img/g2/theme-pandas-480.webp 480w, img/g2/theme-pandas-900.webp 900w, img/g2/theme-pandas-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, pandas, tiges de bambou et feuillage, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Les pandas du bambou</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="anniv-chocolats" data-r-anniversaire="6">
-        <button type="button" class="tuile" data-nom="Tout chocolat" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-chiffre="" data-img="img/g/anniv-chocolats-900.webp">
-          <span class="visuel"><img src="img/g/anniv-chocolats-480.webp" srcset="img/g/anniv-chocolats-480.webp 480w, img/g/anniv-chocolats-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, chocolats sur le dessus, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Tout chocolat</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-sirene" data-r-tous="16" data-r-theme="2">
+        <button type="button" class="tuile" data-nom="La queue de sirène" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-sirene-900.webp">
+          <span class="visuel"><img src="img/g2/theme-sirene-480.webp" srcset="img/g2/theme-sirene-480.webp 480w, img/g2/theme-sirene-900.webp 900w, img/g2/theme-sirene-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose et turquoise, queues de sirène, coquillages, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La queue de sirène</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-pat-patrouille" data-r-theme="3">
-        <button type="button" class="tuile" data-nom="Pat’ Patrouille" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-pat-patrouille-900.webp">
-          <span class="visuel"><img src="img/g/theme-pat-patrouille-480.webp" srcset="img/g/theme-pat-patrouille-480.webp 480w, img/g/theme-pat-patrouille-900.webp 834w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, rouge et bleu, chiot et logo de la Pat’ Patrouille, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Pat’ Patrouille</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-poulpe" data-r-tous="17" data-r-theme="3">
+        <button type="button" class="tuile" data-nom="Le petit poulpe" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-poulpe-900.webp">
+          <span class="visuel"><img src="img/g2/theme-poulpe-480.webp" srcset="img/g2/theme-poulpe-480.webp 480w, img/g2/theme-poulpe-900.webp 900w, img/g2/theme-poulpe-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, poulpe bleu, étoile et hippocampe, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le petit poulpe</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="tahara" data-r-anniversaire="8">
-        <button type="button" class="tuile" data-nom="Tahara" data-gateau="layer" data-fete="Tahara" data-theme="" data-chiffre="" data-img="img/g/tahara-900.webp">
-          <span class="visuel"><img src="img/g/tahara-480.webp" srcset="img/g/tahara-480.webp 480w, img/g/tahara-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu en forme de tenue brodée, galons dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Tahara</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-lapin" data-r-tous="18" data-r-theme="4">
+        <button type="button" class="tuile" data-nom="Les oreilles de lapin" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-lapin-900.webp">
+          <span class="visuel"><img src="img/g2/theme-lapin-480.webp" srcset="img/g2/theme-lapin-480.webp 480w, img/g2/theme-lapin-900.webp 900w, img/g2/theme-lapin-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau lapin blanc, oreilles roses, cils, pattes et queue, prénom sur le support" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Les oreilles de lapin</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-licorne" data-r-theme="4">
-        <button type="button" class="tuile" data-nom="Licorne" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-licorne-900.webp">
-          <span class="visuel"><img src="img/g/theme-licorne-480.webp" srcset="img/g/theme-licorne-480.webp 480w, img/g/theme-licorne-900.webp 861w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau rose à deux étages, corne dorée, fleurs et arc-en-ciel" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Licorne</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-savane" data-r-tous="19" data-r-theme="5">
+        <button type="button" class="tuile" data-nom="La savane dorée" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-savane-900.webp">
+          <span class="visuel"><img src="img/g2/theme-savane-480.webp" srcset="img/g2/theme-savane-480.webp 480w, img/g2/theme-savane-900.webp 900w, img/g2/theme-savane-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, girafes et animaux dorés, feuilles vertes, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La savane dorée</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="mariage" data-id="mariage-roses" data-r-mariage="4">
-        <button type="button" class="tuile" data-nom="Ceinture d’or" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-roses-900.webp">
-          <span class="visuel"><img src="img/g/mariage-roses-480.webp" srcset="img/g/mariage-roses-480.webp 480w, img/g/mariage-roses-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, roses roses et blanches, prénoms dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Ceinture d’or</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="theme" data-id="theme-safari" data-r-tous="20" data-r-theme="6">
+        <button type="button" class="tuile" data-nom="Le safari" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-safari-900.webp">
+          <span class="visuel"><img src="img/g2/theme-safari-480.webp" srcset="img/g2/theme-safari-480.webp 480w, img/g2/theme-safari-900.webp 900w, img/g2/theme-safari-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et vert, girafe, rhinocéros, éléphant et lion, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le safari</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="anniversaire" data-id="number-40" data-r-anniversaire="9">
-        <button type="button" class="tuile" data-nom="Le 40 et son mini gâteau" data-gateau="number" data-fete="Anniversaire" data-theme="" data-chiffre="40" data-img="img/g/number-40-900.webp">
-          <span class="visuel"><img src="img/g/number-40-480.webp" srcset="img/g/number-40-480.webp 480w, img/g/number-40-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 40, fruits rouges, à côté d’un petit layer cake" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Le 40 et son mini gâteau</span><span class="prix">Number cake, dès 30 €</span></span>
+      <li data-f="theme" data-id="theme-supporter" data-r-tous="21" data-r-theme="7">
+        <button type="button" class="tuile" data-nom="Le supporter" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-supporter-900.webp">
+          <span class="visuel"><img src="img/g2/theme-supporter-480.webp" srcset="img/g2/theme-supporter-480.webp 480w, img/g2/theme-supporter-900.webp 900w, img/g2/theme-supporter-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu marine, écusson de club, boules rouges et bleues, ballon" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le supporter</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-roi-lion" data-r-theme="5">
-        <button type="button" class="tuile" data-nom="Le Roi lion" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-roi-lion-900.webp">
-          <span class="visuel"><img src="img/g/theme-roi-lion-480.webp" srcset="img/g/theme-roi-lion-480.webp 480w, img/g/theme-roi-lion-900.webp 807w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, Simba peint, boules vertes et dorées, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Le Roi lion</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="theme" data-id="theme-patrouille" data-r-tous="22" data-r-theme="8">
+        <button type="button" class="tuile" data-nom="La patrouille" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-patrouille-900.webp">
+          <span class="visuel"><img src="img/g2/theme-patrouille-480.webp" srcset="img/g2/theme-patrouille-480.webp 480w, img/g2/theme-patrouille-900.webp 900w, img/g2/theme-patrouille-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, rouge et bleu, chiot pompier, écusson, boules colorées" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La patrouille</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="mariage" data-id="mariage-da" data-r-mariage="5">
-        <button type="button" class="tuile" data-nom="Le jour J" data-gateau="wedding" data-fete="Mariage" data-theme="" data-chiffre="" data-img="img/g/mariage-da-900.webp">
-          <span class="visuel"><img src="img/g/mariage-da-480.webp" srcset="img/g/mariage-da-480.webp 480w, img/g/mariage-da-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc, initiales et date dorées, roses blanches" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Le jour J</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+      <li data-f="theme" data-id="theme-poupee" data-r-tous="23" data-r-theme="9">
+        <button type="button" class="tuile" data-nom="La poupée fuchsia" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g2/theme-poupee-900.webp">
+          <span class="visuel"><img src="img/g2/theme-poupee-480.webp" srcset="img/g2/theme-poupee-480.webp 480w, img/g2/theme-poupee-900.webp 900w, img/g2/theme-poupee-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, crème fouettée, boules roses, prénom et inscription roses" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La poupée fuchsia</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-psg" data-r-theme="6">
-        <button type="button" class="tuile" data-nom="PSG" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-psg-900.webp">
-          <span class="visuel"><img src="img/g/theme-psg-480.webp" srcset="img/g/theme-psg-480.webp 480w, img/g/theme-psg-900.webp 717w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu marine, écusson du PSG, ballons de foot, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">PSG</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="number" data-id="number-duo" data-r-tous="3" data-r-number="0">
+        <button type="button" class="tuile" data-nom="Le duo de fruits rouges" data-gateau="number" data-fete="Anniversaire" data-theme="" data-chiffre="40" data-img="img/g2/number-duo-900.webp">
+          <span class="visuel"><img src="img/g2/number-duo-480.webp" srcset="img/g2/number-duo-480.webp 480w, img/g2/number-duo-900.webp 900w, img/g2/number-duo-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 40, crème, fraises, framboises et roses rouges" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le duo de fruits rouges</span><span class="prix">Number cake, dès 30 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-vaiana" data-r-theme="7">
-        <button type="button" class="tuile" data-nom="Vaiana" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-vaiana-900.webp">
-          <span class="visuel"><img src="img/g/theme-vaiana-480.webp" srcset="img/g/theme-vaiana-480.webp 480w, img/g/theme-vaiana-900.webp 753w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu, Vaiana et Maui, prénom et chiffre 4 dorés" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Vaiana</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="number" data-id="number-boite" data-r-tous="24" data-r-number="1">
+        <button type="button" class="tuile" data-nom="Le 40 en boîte" data-gateau="number" data-fete="Anniversaire" data-theme="" data-chiffre="40" data-img="img/g2/number-boite-900.webp">
+          <span class="visuel"><img src="img/g2/number-boite-480.webp" srcset="img/g2/number-boite-480.webp 480w, img/g2/number-boite-900.webp 900w, img/g2/number-boite-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake 40 dans sa boîte, fruits rouges, crème et plaque prénom" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le 40 en boîte</span><span class="prix">Number cake, dès 30 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-sirene" data-r-theme="8">
-        <button type="button" class="tuile" data-nom="Sirène" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-sirene-900.webp">
-          <span class="visuel"><img src="img/g/theme-sirene-480.webp" srcset="img/g/theme-sirene-480.webp 480w, img/g/theme-sirene-900.webp 829w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose et turquoise, queues de sirène sur le dessus, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Sirène</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="naissance" data-id="naissance-maman" data-r-tous="4" data-r-naissance="0">
+        <button type="button" class="tuile" data-nom="La future maman" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-chiffre="" data-img="img/g2/naissance-maman-900.webp">
+          <span class="visuel"><img src="img/g2/naissance-maman-480.webp" srcset="img/g2/naissance-maman-480.webp 480w, img/g2/naissance-maman-900.webp 900w, img/g2/naissance-maman-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau blanc, dessin doré d’une future maman, roses roses en haut et en bas" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La future maman</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-barbie" data-r-theme="9">
-        <button type="button" class="tuile" data-nom="Barbie" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-barbie-900.webp">
-          <span class="visuel"><img src="img/g/theme-barbie-480.webp" srcset="img/g/theme-barbie-480.webp 480w, img/g/theme-barbie-900.webp 838w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, inscriptions Barbie et prénom pailletées" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Barbie</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="naissance" data-id="naissance-fille-garcon" data-r-tous="25" data-r-naissance="1">
+        <button type="button" class="tuile" data-nom="Fille ou garçon" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-chiffre="" data-img="img/g2/naissance-fille-garcon-900.webp">
+          <span class="visuel"><img src="img/g2/naissance-fille-garcon-480.webp" srcset="img/g2/naissance-fille-garcon-480.webp 480w, img/g2/naissance-fille-garcon-900.webp 900w, img/g2/naissance-fille-garcon-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake à deux étages, touches roses et bleues, oursons, Boy or Girl en doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Fille ou garçon</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-panda" data-r-theme="10">
-        <button type="button" class="tuile" data-nom="Pandas" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-panda-900.webp">
-          <span class="visuel"><img src="img/g/theme-panda-480.webp" srcset="img/g/theme-panda-480.webp 480w, img/g/theme-panda-900.webp 820w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, pandas et bambous, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Pandas</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="naissance" data-id="naissance-accueil" data-r-tous="26" data-r-naissance="2">
+        <button type="button" class="tuile" data-nom="Le doux accueil" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-chiffre="" data-img="img/g2/naissance-accueil-900.webp">
+          <span class="visuel"><img src="img/g2/naissance-accueil-480.webp" srcset="img/g2/naissance-accueil-480.webp 480w, img/g2/naissance-accueil-900.webp 900w, img/g2/naissance-accueil-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, décors roses, Welcome Baby en doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le doux accueil</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
-      <li data-f="theme" data-id="theme-jungle" data-r-theme="11">
-        <button type="button" class="tuile" data-nom="Jungle" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-chiffre="" data-img="img/g/theme-jungle-900.webp">
-          <span class="visuel"><img src="img/g/theme-jungle-480.webp" srcset="img/g/theme-jungle-480.webp 480w, img/g/theme-jungle-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, girafe, rhinocéros et éléphant, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
-          <span class="bas"><span class="nom">Jungle</span><span class="prix">Layer cake, dès 75 €</span></span>
+      <li data-f="naissance" data-id="naissance-ourson" data-r-tous="27" data-r-naissance="3">
+        <button type="button" class="tuile" data-nom="L’ourson dans les nuages" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-chiffre="" data-img="img/g2/naissance-ourson-900.webp">
+          <span class="visuel"><img src="img/g2/naissance-ourson-480.webp" srcset="img/g2/naissance-ourson-480.webp 480w, img/g2/naissance-ourson-900.webp 900w, img/g2/naissance-ourson-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake à trois étages, arc-en-ciel, nuages, ourson, prénom doré" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">L’ourson dans les nuages</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="tahara" data-id="tahara-costume" data-r-tous="5" data-r-tahara="0">
+        <button type="button" class="tuile" data-nom="Le costume vert et or" data-gateau="layer" data-fete="Tahara" data-theme="" data-chiffre="" data-img="img/g2/tahara-costume-900.webp">
+          <span class="visuel"><img src="img/g2/tahara-costume-480.webp" srcset="img/g2/tahara-costume-480.webp 480w, img/g2/tahara-costume-900.webp 900w, img/g2/tahara-costume-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau costume vert brodé d’or, chapeau et nœud, prénom doré sur le support" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le costume vert et or</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="tahara" data-id="tahara-cape" data-r-tous="28" data-r-tahara="1">
+        <button type="button" class="tuile" data-nom="La cape céleste" data-gateau="layer" data-fete="Tahara" data-theme="" data-chiffre="" data-img="img/g2/tahara-cape-900.webp">
+          <span class="visuel"><img src="img/g2/tahara-cape-480.webp" srcset="img/g2/tahara-cape-480.webp 480w, img/g2/tahara-cape-900.webp 900w, img/g2/tahara-cape-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau tenue blanche et bleu ciel, galons dorés, cape et petits chaussons" loading="lazy" width="480" height="600"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">La cape céleste</span><span class="prix">Layer cake, dès 75 €</span></span>
         </button>
       </li>
       <li data-f="mariage" data-id="devis" data-r-mariage="3.5" class="carte-devis">
@@ -282,7 +291,7 @@
   <section class="composer" id="composer" aria-labelledby="titre-comp">
     <div class="atelier" aria-hidden="true">
       <span class="etiquette" id="etiquette">Votre gâteau</span>
-      <img id="apercu" src="img/g/number-50-900.webp" alt="">
+      <img id="apercu" src="img/g2/number-duo-900.webp" alt="">
       <div class="estim"><small id="estimTitre">À partir de</small><strong id="prix">30 €</strong></div>
     </div>
     <form class="formulaire" id="form" novalidate>

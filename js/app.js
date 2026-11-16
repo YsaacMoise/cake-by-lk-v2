@@ -175,13 +175,13 @@
   }
   function imageAtelier() {
     if (etat.modele) return etat.modele.img;
-    if (!etat.fete && !etat.gateau) return 'img/g/number-50-900.webp';
-    if (etat.gateau === 'number') return 'img/g/number-50-900.webp';
-    if (etat.gateau === 'wedding' || etat.fete === 'Mariage') return 'img/g/mariage-agrumes-900.webp';
-    if (etat.fete === 'Baby shower ou gender reveal') return 'img/g/baby-shower-900.webp';
-    if (etat.fete === 'Tahara') return 'img/g/tahara-900.webp';
-    if (etat.themeCarte) return 'img/g/theme-licorne-900.webp';
-    return 'img/g/anniv-chocolats-900.webp';
+    if (!etat.fete && !etat.gateau) return 'img/g2/number-duo-900.webp';
+    if (etat.gateau === 'number') return 'img/g2/number-duo-900.webp';
+    if (etat.gateau === 'wedding' || etat.fete === 'Mariage') return 'img/g2/mariage-date-900.webp';
+    if (etat.fete === 'Baby shower ou gender reveal') return 'img/g2/naissance-maman-900.webp';
+    if (etat.fete === 'Tahara') return 'img/g2/tahara-costume-900.webp';
+    if (etat.themeCarte) return 'img/g2/theme-licorne-900.webp';
+    return 'img/g2/anniv-geode-900.webp';
   }
   var apercu = $('#apercu');
   function majPrix() {
