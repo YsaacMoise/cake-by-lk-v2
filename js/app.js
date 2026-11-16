@@ -175,12 +175,12 @@
   }
   function imageAtelier() {
     if (etat.modele) return etat.modele.img;
-    if (!etat.fete && !etat.gateau) return 'img/g/number-18-900.webp';
-    if (etat.gateau === 'number') return 'img/g/number-18-900.webp';
+    if (!etat.fete && !etat.gateau) return 'img/g/number-50-900.webp';
+    if (etat.gateau === 'number') return 'img/g/number-50-900.webp';
     if (etat.gateau === 'wedding' || etat.fete === 'Mariage') return 'img/g/mariage-agrumes-900.webp';
     if (etat.fete === 'Baby shower ou gender reveal') return 'img/g/baby-shower-900.webp';
     if (etat.fete === 'Tahara') return 'img/g/tahara-900.webp';
-    if (etat.themeCarte) return 'img/g/theme-stitch-900.webp';
+    if (etat.themeCarte) return 'img/g/theme-licorne-900.webp';
     return 'img/g/anniv-fruits-rouges-900.webp';
   }
   var apercu = $('#apercu');
