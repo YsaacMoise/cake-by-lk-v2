@@ -1,0 +1,8 @@
+# Outils de contrôle (pas en ligne)
+.gout/
+gabarit.html
+# Système
+Thumbs.db
+desktop.ini
+.DS_Store
+.env

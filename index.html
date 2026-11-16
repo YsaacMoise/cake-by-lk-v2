@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr" class="sans-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cake by LK · Gâteaux sur mesure au Havre</title>
+<meta name="description" content="Layer cakes, number cakes, wedding cakes et gâteaux à thème, au Havre et alentours. Composez votre gâteau et envoyez-moi votre demande sur Instagram.">
+<meta property="og:title" content="Cake by LK · Gâteaux sur mesure au Havre">
+<meta property="og:description" content="Composez votre gâteau et envoyez-moi votre demande sur Instagram.">
+<meta property="og:image" content="https://ysaacmoise.github.io/cake-by-lk-v2/partage.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="polices/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.remove('sans-js')</script>
+</head>
+<body>
+<a class="evitement" href="#composer">Aller au formulaire de commande</a>
+
+<header class="entete" id="entete">
+  <a href="#haut" class="marque" aria-label="Cake by LK, retour en haut">
+    <span class="logo">cake by lk<i aria-hidden="true"></i></span>
+    <small>Cake design au Havre</small>
+  </a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <a href="#creations" class="lien">Mes gâteaux</a>
+    <a href="#carte" class="lien">Ma carte</a>
+    <a href="https://www.instagram.com/cakeby_lk/" class="lien" target="_blank" rel="noopener">Instagram<span class="sr"> (nouvel onglet)</span></a>
+    <a href="#composer" class="bouton">Composer mon gâteau</a>
+  </nav>
+</header>
+
+<main id="haut">
+  <section class="hero" id="hero" aria-label="Accueil">
+    <div class="scene" id="scene">
+      <h1 class="titre"><span class="sr">Gâteaux sur mesure, cake design au Havre</span>
+        <span class="ligne l1" id="l1" aria-hidden="true" data-mots="Gâteaux"></span>
+        <span class="ligne l2" id="l2" aria-hidden="true" data-mots="sur mesure"></span>
+      </h1>
+      <div class="gateau" id="gateau">
+        <div class="gateau-entree"><img src="img/gateau-1200.webp" srcset="img/gateau-760.webp 441w, img/gateau-1200.webp 696w" sizes="(max-width:820px) 260px, 420px" alt="Wedding cake blanc à deux étages, roses roses et blanches, prénoms en lettres dorées" width="696" height="1200" fetchpriority="high"></div>
+      </div>
+      <p class="intro" id="intro">Je fais vos gâteaux de fête au Havre : anniversaires, mariages, baby showers et gâteaux à thème.<span class="faits">Dès 30 € · Le Havre et alentours · À retirer</span></p>
+      <div class="suite" id="suite">
+        <p class="sur">Votre gâteau, votre idée</p>
+        <h2>Vous choisissez.<br>Je le réalise.</h2>
+        <p class="txt">La fête, le gâteau, la saveur et la date. Votre message s’écrit tout seul et vous me l’envoyez sur Instagram.</p>
+        <a href="#composer" class="bouton">Composer mon gâteau <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="indice" id="indice" aria-hidden="true">Défiler<span></span></div>
+    </div>
+  </section>
+
+  <section class="occasions" id="occasions" aria-labelledby="titre-occ">
+    <div class="tete">
+      <h2 id="titre-occ">Pour quelle<br>occasion ?</h2>
+      <p>Ma signature : un gâteau haut, des fleurs fraîches et le prénom en lettres dorées. Les prix sont des prix de départ.</p>
+    </div>
+    <div class="rail">
+      <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="layer">
+        <span class="visuel"><img src="img/g/anniv-fruits-rouges-480.webp" srcset="img/g/anniv-fruits-rouges-480.webp 480w, img/g/anniv-fruits-rouges-900.webp 820w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="640"></span>
+        <span class="num">01 · Anniversaire</span>
+        <span class="ligne-bas"><span class="nom">Layer cake</span><span class="prix">dès 75 €</span></span>
+      </a>
+      <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="number">
+        <span class="visuel"><img src="img/g/number-18-480.webp" srcset="img/g/number-18-480.webp 480w, img/g/number-18-900.webp 660w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="640"></span>
+        <span class="num">02 · Un chiffre</span>
+        <span class="ligne-bas"><span class="nom">Number cake</span><span class="prix">dès 30 €</span></span>
+      </a>
+      <a href="#composer" class="carte" data-fete="Mariage" data-gateau="wedding">
+        <span class="visuel"><img src="img/g/mariage-agrumes-480.webp" srcset="img/g/mariage-agrumes-480.webp 480w, img/g/mariage-agrumes-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="640"></span>
+        <span class="num">03 · Mariage</span>
+        <span class="ligne-bas"><span class="nom">Wedding cake</span><span class="prix">dès 5 € la part</span></span>
+      </a>
+      <a href="#composer" class="carte" data-fete="Anniversaire" data-gateau="layer" data-theme="oui">
+        <span class="visuel"><img src="img/g/theme-stitch-480.webp" srcset="img/g/theme-stitch-480.webp 480w, img/g/theme-stitch-900.webp 841w" sizes="(max-width:820px) 50vw, 25vw" alt="" loading="lazy" width="480" height="640"></span>
+        <span class="num">04 · Votre personnage</span>
+        <span class="ligne-bas"><span class="nom">À thème</span><span class="prix">dès 75 €</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="creations" id="creations" aria-labelledby="titre-crea">
+    <div class="tete">
+      <h2 id="titre-crea">Mes gâteaux</h2>
+      <p>Un modèle vous plaît ? Je l’adapte à votre fête.</p>
+    </div>
+    <div class="filtres" role="group" aria-label="Choisir une occasion">
+      <button type="button" class="puce" data-filtre="tous" aria-pressed="true">Tous</button>
+      <button type="button" class="puce" data-filtre="anniversaire" aria-pressed="false">Anniversaires et fêtes</button>
+      <button type="button" class="puce" data-filtre="theme" aria-pressed="false">À thème</button>
+      <button type="button" class="puce" data-filtre="mariage" aria-pressed="false">Mariages</button>
+    </div>
+    <ul class="galerie" id="galerie">
+      <li data-f="mariage" data-id="mariage-suspendu" data-r-tous="0" data-r-mariage="1">
+        <button type="button" class="tuile" data-nom="L’étage suspendu" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-suspendu-900.webp">
+          <span class="visuel"><img src="img/g/mariage-suspendu-480.webp" srcset="img/g/mariage-suspendu-480.webp 480w, img/g/mariage-suspendu-900.webp 840w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc dont l’étage du haut est suspendu au-dessus des fleurs" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">L’étage suspendu</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="number-18" data-r-tous="1" data-r-anniversaire="2">
+        <button type="button" class="tuile" data-nom="Le 18 gourmand" data-gateau="number" data-fete="Anniversaire" data-theme="" data-img="img/g/number-18-900.webp">
+          <span class="visuel"><img src="img/g/number-18-480.webp" srcset="img/g/number-18-480.webp 480w, img/g/number-18-900.webp 660w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 18, fruits rouges d’un côté, chocolats de l’autre" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le 18 gourmand</span><span class="prix">Number cake, dès 30 €</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="anniv-ahlem" data-r-tous="2" data-r-anniversaire="1">
+        <button type="button" class="tuile" data-nom="Clin d’œil" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-img="img/g/anniv-ahlem-900.webp">
+          <span class="visuel"><img src="img/g/anniv-ahlem-480.webp" srcset="img/g/anniv-ahlem-480.webp 480w, img/g/anniv-ahlem-900.webp 660w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc décoré d’un visage maquillé, rouge à lèvres et pivoines" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Clin d’œil</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-stitch" data-r-tous="3" data-r-theme="0">
+        <button type="button" class="tuile" data-nom="Stitch" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-stitch-900.webp">
+          <span class="visuel"><img src="img/g/theme-stitch-480.webp" srcset="img/g/theme-stitch-480.webp 480w, img/g/theme-stitch-900.webp 841w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake bleu, Stitch, coquillages et étoiles de mer, prénoms dorés" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Stitch</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="baby-shower" data-r-tous="4" data-r-anniversaire="3">
+        <button type="button" class="tuile" data-nom="Future maman" data-gateau="layer" data-fete="Baby shower ou gender reveal" data-theme="" data-img="img/g/baby-shower-900.webp">
+          <span class="visuel"><img src="img/g/baby-shower-480.webp" srcset="img/g/baby-shower-480.webp 480w, img/g/baby-shower-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau blanc, silhouette de femme enceinte dessinée en doré, roses roses et blanches" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Future maman</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="anniv-fruits-rouges" data-r-anniversaire="0">
+        <button type="button" class="tuile" data-nom="Fraises et framboises" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-img="img/g/anniv-fruits-rouges-900.webp">
+          <span class="visuel"><img src="img/g/anniv-fruits-rouges-480.webp" srcset="img/g/anniv-fruits-rouges-480.webp 480w, img/g/anniv-fruits-rouges-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, fruits rouges sur le dessus, éclats rouges et dorés, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Fraises et framboises</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="mariage-agrumes" data-r-mariage="0">
+        <button type="button" class="tuile" data-nom="Citron et fleurs jaunes" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-agrumes-900.webp">
+          <span class="visuel"><img src="img/g/mariage-agrumes-480.webp" srcset="img/g/mariage-agrumes-480.webp 480w, img/g/mariage-agrumes-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, initiales dorées, fleurs jaunes et tranches de citron" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Citron et fleurs jaunes</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="anniv-oceane" data-r-anniversaire="4">
+        <button type="button" class="tuile" data-nom="Deux roses blanches" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-img="img/g/anniv-oceane-900.webp">
+          <span class="visuel"><img src="img/g/anniv-oceane-480.webp" srcset="img/g/anniv-oceane-480.webp 480w, img/g/anniv-oceane-900.webp 560w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, roses blanches sur le dessus, inscription dorée" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Deux roses blanches</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-spiderman" data-r-theme="1">
+        <button type="button" class="tuile" data-nom="Spider-Man" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-spiderman-900.webp">
+          <span class="visuel"><img src="img/g/theme-spiderman-480.webp" srcset="img/g/theme-spiderman-480.webp 480w, img/g/theme-spiderman-900.webp 822w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, Spider-Man, araignées et toiles, prénom écrit en noir" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Spider-Man</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="mariage-nassim-cassandra" data-r-mariage="2">
+        <button type="button" class="tuile" data-nom="Roses rouges et blanches" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-nassim-cassandra-900.webp">
+          <span class="visuel"><img src="img/g/mariage-nassim-cassandra-480.webp" srcset="img/g/mariage-nassim-cassandra-480.webp 480w, img/g/mariage-nassim-cassandra-900.webp 840w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à trois étages, roses rouges et blanches, prénoms dorés" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Roses rouges et blanches</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="anniv-brina" data-r-anniversaire="5">
+        <button type="button" class="tuile" data-nom="Éclats d’or" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-img="img/g/anniv-brina-900.webp">
+          <span class="visuel"><img src="img/g/anniv-brina-480.webp" srcset="img/g/anniv-brina-480.webp 480w, img/g/anniv-brina-900.webp 640w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc à deux étages, feuille d’or, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Éclats d’or</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-minnie" data-r-theme="2">
+        <button type="button" class="tuile" data-nom="Minnie" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-minnie-900.webp">
+          <span class="visuel"><img src="img/g/theme-minnie-480.webp" srcset="img/g/theme-minnie-480.webp 480w, img/g/theme-minnie-900.webp 773w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, Minnie et nœud rose, prénom en noir" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Minnie</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="number-50" data-r-anniversaire="7">
+        <button type="button" class="tuile" data-nom="Le 50 aux fruits rouges" data-gateau="number" data-fete="Anniversaire" data-theme="" data-img="img/g/number-50-900.webp">
+          <span class="visuel"><img src="img/g/number-50-480.webp" srcset="img/g/number-50-480.webp 480w, img/g/number-50-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 50, crème, fruits rouges et chocolat blanc" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le 50 aux fruits rouges</span><span class="prix">Number cake, dès 30 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="mariage-sb" data-r-mariage="3">
+        <button type="button" class="tuile" data-nom="L’étage de roses" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-sb-900.webp">
+          <span class="visuel"><img src="img/g/mariage-sb-480.webp" srcset="img/g/mariage-sb-480.webp 480w, img/g/mariage-sb-900.webp 840w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à trois étages, initiales dorées, roses blanches" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">L’étage de roses</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="anniv-chocolats" data-r-anniversaire="6">
+        <button type="button" class="tuile" data-nom="Tout chocolat" data-gateau="layer" data-fete="Anniversaire" data-theme="" data-img="img/g/anniv-chocolats-900.webp">
+          <span class="visuel"><img src="img/g/anniv-chocolats-480.webp" srcset="img/g/anniv-chocolats-480.webp 480w, img/g/anniv-chocolats-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, chocolats sur le dessus, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Tout chocolat</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-pat-patrouille" data-r-theme="3">
+        <button type="button" class="tuile" data-nom="Pat’ Patrouille" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-pat-patrouille-900.webp">
+          <span class="visuel"><img src="img/g/theme-pat-patrouille-480.webp" srcset="img/g/theme-pat-patrouille-480.webp 480w, img/g/theme-pat-patrouille-900.webp 883w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, rouge et bleu, chiot et logo de la Pat’ Patrouille, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Pat’ Patrouille</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="tahara" data-r-anniversaire="8">
+        <button type="button" class="tuile" data-nom="Tahara" data-gateau="layer" data-fete="Tahara" data-theme="" data-img="img/g/tahara-900.webp">
+          <span class="visuel"><img src="img/g/tahara-480.webp" srcset="img/g/tahara-480.webp 480w, img/g/tahara-900.webp 814w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu en forme de tenue brodée, galons dorés" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Tahara</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-licorne" data-r-theme="4">
+        <button type="button" class="tuile" data-nom="Licorne" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-licorne-900.webp">
+          <span class="visuel"><img src="img/g/theme-licorne-480.webp" srcset="img/g/theme-licorne-480.webp 480w, img/g/theme-licorne-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Gâteau rose à deux étages, corne dorée, fleurs et arc-en-ciel" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Licorne</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="mariage-roses" data-r-mariage="4">
+        <button type="button" class="tuile" data-nom="Ceinture d’or" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-roses-900.webp">
+          <span class="visuel"><img src="img/g/mariage-roses-480.webp" srcset="img/g/mariage-roses-480.webp 480w, img/g/mariage-roses-1200.webp 1200w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc à deux étages, roses roses et blanches, prénoms dorés" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Ceinture d’or</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="anniversaire" data-id="number-40" data-r-anniversaire="9">
+        <button type="button" class="tuile" data-nom="Le 40 et son mini gâteau" data-gateau="number" data-fete="Anniversaire" data-theme="" data-img="img/g/number-40-900.webp">
+          <span class="visuel"><img src="img/g/number-40-480.webp" srcset="img/g/number-40-480.webp 480w, img/g/number-40-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Number cake en forme de 40, fruits rouges, à côté d’un petit layer cake" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le 40 et son mini gâteau</span><span class="prix">Number cake, dès 30 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-roi-lion" data-r-theme="5">
+        <button type="button" class="tuile" data-nom="Le Roi lion" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-roi-lion-900.webp">
+          <span class="visuel"><img src="img/g/theme-roi-lion-480.webp" srcset="img/g/theme-roi-lion-480.webp 480w, img/g/theme-roi-lion-900.webp 810w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, Simba peint, boules vertes et dorées, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le Roi lion</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="mariage-da" data-r-mariage="5">
+        <button type="button" class="tuile" data-nom="Le jour J" data-gateau="wedding" data-fete="Mariage" data-theme="" data-img="img/g/mariage-da-900.webp">
+          <span class="visuel"><img src="img/g/mariage-da-480.webp" srcset="img/g/mariage-da-480.webp 480w, img/g/mariage-da-900.webp 840w" sizes="(max-width:820px) 50vw, 25vw" alt="Wedding cake blanc, initiales et date dorées, roses blanches" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Le jour J</span><span class="prix">Wedding cake, dès 5 € la part</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-psg" data-r-theme="6">
+        <button type="button" class="tuile" data-nom="PSG" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-psg-900.webp">
+          <span class="visuel"><img src="img/g/theme-psg-480.webp" srcset="img/g/theme-psg-480.webp 480w, img/g/theme-psg-900.webp 773w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu marine, écusson du PSG, ballons de foot, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">PSG</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-vaiana" data-r-theme="7">
+        <button type="button" class="tuile" data-nom="Vaiana" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-vaiana-900.webp">
+          <span class="visuel"><img src="img/g/theme-vaiana-480.webp" srcset="img/g/theme-vaiana-480.webp 480w, img/g/theme-vaiana-900.webp 753w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc et bleu, Vaiana et Maui, prénom et chiffre 4 dorés" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Vaiana</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-sirene" data-r-theme="8">
+        <button type="button" class="tuile" data-nom="Sirène" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-sirene-900.webp">
+          <span class="visuel"><img src="img/g/theme-sirene-480.webp" srcset="img/g/theme-sirene-480.webp 480w, img/g/theme-sirene-900.webp 829w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose et turquoise, queues de sirène sur le dessus, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Sirène</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-barbie" data-r-theme="9">
+        <button type="button" class="tuile" data-nom="Barbie" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-barbie-900.webp">
+          <span class="visuel"><img src="img/g/theme-barbie-480.webp" srcset="img/g/theme-barbie-480.webp 480w, img/g/theme-barbie-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake rose, inscriptions Barbie et prénom pailletées" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Barbie</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-panda" data-r-theme="10">
+        <button type="button" class="tuile" data-nom="Pandas" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-panda-900.webp">
+          <span class="visuel"><img src="img/g/theme-panda-480.webp" srcset="img/g/theme-panda-480.webp 480w, img/g/theme-panda-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, pandas et bambous, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Pandas</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="theme" data-id="theme-jungle" data-r-theme="11">
+        <button type="button" class="tuile" data-nom="Jungle" data-gateau="layer" data-fete="Anniversaire" data-theme="oui" data-img="img/g/theme-jungle-900.webp">
+          <span class="visuel"><img src="img/g/theme-jungle-480.webp" srcset="img/g/theme-jungle-480.webp 480w, img/g/theme-jungle-900.webp 900w" sizes="(max-width:820px) 50vw, 25vw" alt="Layer cake blanc, girafe, rhinocéros et éléphant, prénom doré" loading="lazy" width="480" height="640"><span class="veux" aria-hidden="true">Je veux celui-ci</span></span>
+          <span class="bas"><span class="nom">Jungle</span><span class="prix">Layer cake, dès 75 €</span></span>
+        </button>
+      </li>
+      <li data-f="mariage" data-id="devis" data-r-mariage="3.5" class="carte-devis">
+        <div class="devis"><p class="t">Votre wedding cake</p><p class="s">Sur devis, selon le nombre d’invités.</p><a href="#composer" class="bouton" data-fete="Mariage" data-gateau="wedding">Demander un devis</a></div>
+      </li>
+    </ul>
+    <div class="plus"><button type="button" class="bouton clair" id="voirPlus" hidden>Voir les autres gâteaux</button></div>
+  </section>
+
+  <section class="carte-prix" id="carte" aria-labelledby="titre-carte">
+    <h2 id="titre-carte" class="rv">Ma carte</h2>
+    <p class="rv">Le prix dépend du nombre de parts. Selon le décor, il peut y avoir un supplément. Je vous donne le prix exact en vous répondant.</p>
+    <div class="grille4 rv">
+      <div><span class="chiffre">75 €</span><span class="quoi">Layer cake, 15 parts</span><span class="detail">95 € les 20 parts, 120 € les 25 parts. Pour toutes les fêtes sauf les mariages, au thème de votre choix.</span></div>
+      <div><span class="chiffre">30 €</span><span class="quoi">Number cake, 6 parts</span><span class="detail">35 € les 8 à 10 parts. Pour les anniversaires.</span></div>
+      <div><span class="chiffre">5 €</span><span class="quoi">La part de wedding cake</span><span class="detail">Sur devis, selon le nombre d’invités.</span></div>
+      <div><span class="chiffre">3 €</span><span class="quoi">Sablé, cupcake ou popcake</span><span class="detail">La pièce, en plus du gâteau.</span></div>
+    </div>
+    <p class="saveurs-ligne rv">Pour les layer cakes et les wedding cakes, cinq saveurs : <b>le 3 chocolat</b>, <b>le Bueno</b>, <b>le Fraisier</b>, <b>le Framboisier</b> et <b>le Specaramel</b>. Chaque saveur est détaillée à l’étape « La saveur » du formulaire.</p>
+  </section>
+
+  <section class="composer" id="composer" aria-labelledby="titre-comp">
+    <div class="atelier" aria-hidden="true">
+      <span class="etiquette" id="etiquette">Votre gâteau</span>
+      <img id="apercu" src="img/g/number-18-900.webp" alt="">
+      <div class="estim"><small id="estimTitre">À partir de</small><strong id="prix">30 €</strong></div>
+    </div>
+    <form class="formulaire" id="form" novalidate>
+      <h2 id="titre-comp">Composez<br>votre gâteau.</h2>
+      <p class="chapo">Quelques choix, et votre message s’écrit tout seul. Vous me l’envoyez sur Instagram, je vous confirme la date, le décor et le prix.</p>
+      <noscript><p class="aide">Ce formulaire a besoin de JavaScript. Sans lui, écrivez-moi directement : <a href="https://ig.me/m/cakeby_lk">m’écrire sur Instagram</a>.</p></noscript>
+
+      <div class="modele" id="modele" hidden>
+        <img id="modeleImg" src="" alt="" width="52" height="64">
+        <p>Modèle choisi : <b id="modeleNom"></b>. Je l’adapte à votre fête.</p>
+        <button type="button" class="lien-btn" id="modeleRetirer">Retirer</button>
+      </div>
+
+      <div class="etape" role="group" aria-labelledby="e1"><h3 id="e1"><span>01</span>La fête</h3><div class="puces" id="choixFete"></div></div>
+      <div class="etape" role="group" aria-labelledby="e2" id="etapeGateau" hidden><h3 id="e2"><span>02</span>Le gâteau</h3><div class="puces" id="choixGateau"></div></div>
+      <div class="etape" role="group" aria-labelledby="e3" id="etapeTaille" hidden><h3 id="e3"><span>03</span><span id="e3txt">Le nombre de parts</span></h3><div id="zoneTaille"></div></div>
+      <div class="etape" role="group" aria-labelledby="e4" id="etapeSaveur" hidden><h3 id="e4"><span>04</span><span id="e4txt">La saveur</span></h3><div class="puces" id="choixSaveur"></div><p class="compo" id="compo" aria-live="polite"></p></div>
+      <div class="etape" id="etapeDecor" hidden>
+        <h3><span>05</span>Le décor</h3>
+        <div class="champs">
+          <div class="champ large"><label for="texte" id="texteLabel">Prénom ou texte sur le gâteau</label><input id="texte" type="text" maxlength="60" autocomplete="off"></div>
+          <div class="champ large" id="champTheme"><label for="theme">Un thème ou un personnage (facultatif)</label><input id="theme" type="text" maxlength="60" autocomplete="off"></div>
+          <div class="champ large"><label for="idees">Vos idées de décor : couleurs, fleurs… (facultatif)</label><textarea id="idees" rows="2" maxlength="400"></textarea></div>
+        </div>
+        <p class="aide" id="decorAide">Le prénom est écrit en lettres dorées. Si vous avez une photo modèle, envoyez-la-moi avec le message.</p>
+      </div>
+      <div class="etape" id="etapeDouceurs" hidden>
+        <h3><span>06</span>Des douceurs en plus (facultatif)</h3>
+        <div class="compteurs" id="compteurs"></div>
+      </div>
+      <div class="etape" id="etapeDate" hidden>
+        <h3><span>07</span>La date et votre prénom</h3>
+        <div class="champs">
+          <div class="champ"><label for="date">Date de la fête</label><input id="date" type="date" required></div>
+          <div class="champ"><label for="nom">Votre prénom</label><input id="nom" type="text" autocomplete="given-name" required maxlength="40"></div>
+          <div class="champ"><label for="tel">Téléphone (facultatif)</label><input id="tel" type="tel" autocomplete="tel" maxlength="20"></div>
+          <div class="champ"><label for="allergies">Allergies ou régime (facultatif)</label><input id="allergies" type="text" maxlength="80"></div>
+        </div>
+        <p class="aide">Le gâteau est à retirer. Je vous donne l’adresse en vous répondant.</p>
+      </div>
+
+      <div class="envoi" id="envoi" hidden>
+        <button type="submit" class="bouton" id="preparer">Préparer mon message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <span>Rien n’est envoyé d’ici : vous m’envoyez le message vous-même sur Instagram.</span>
+      </div>
+      <p class="erreur" id="erreur" role="alert"></p>
+      <div class="message" id="message" role="status" tabindex="-1">
+        <h3>Votre message est prêt.</h3>
+        <p class="aide" id="copieInfo"></p>
+        <pre id="messageTexte"></pre>
+        <div class="actions">
+          <a class="bouton" href="https://ig.me/m/cakeby_lk" target="_blank" rel="noopener">Ouvrir Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr"> (nouvel onglet)</span></a>
+          <button type="button" class="bouton clair" id="recopier">Copier le message</button>
+        </div>
+        <p class="aide">Vos réponses restent sur votre téléphone ou votre ordinateur. Elles servent seulement à écrire ce message.</p>
+      </div>
+      <p class="sr" aria-live="polite" id="annonce"></p>
+    </form>
+  </section>
+
+  <section class="fin" aria-labelledby="titre-fin">
+    <h2 id="titre-fin" class="rv">Racontez-moi<br>votre fête.</h2>
+    <div class="actions rv">
+      <a href="#composer" class="bouton">Composer mon gâteau</a>
+      <a href="https://ig.me/m/cakeby_lk" class="bouton clair" target="_blank" rel="noopener">M’écrire sur Instagram<span class="sr"> (nouvel onglet)</span></a>
+    </div>
+    <div class="retours rv" aria-label="Retours de clientes">
+      <blockquote>« On a commandé tard et t’as été réactive, t’as fait exactement ce que l’on souhaitait. »</blockquote>
+      <blockquote>« On ne sent réellement pas le beurre. Beau et bon ! »</blockquote>
+      <blockquote>« Encore une fois, il a fait carton plein. »</blockquote>
+    </div>
+    <a class="retours-lien" href="https://www.instagram.com/cakeby_lk/" target="_blank" rel="noopener">Lire tous les retours sur Instagram<span class="sr"> (nouvel onglet)</span></a>
+    <div class="pied"><span>Cake by LK · Gâteaux sur commande, au Havre et alentours</span><a href="https://www.instagram.com/cakeby_lk/" target="_blank" rel="noopener">@cakeby_lk<span class="sr"> (nouvel onglet)</span></a></div>
+  </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
