@@ -279,9 +279,14 @@ img{display:block;max-width:100%}
   .puces.saveurs{grid-template-columns:repeat(3,1fr)}
   .retours{grid-template-columns:1fr;gap:20px}
 }
-@media (max-width:400px){
-  .grille4{grid-template-columns:1fr}
-  .grille4>div+div{border-left:0;padding-left:0;border-top:1px solid var(--trait)}
+@media (max-width:600px){
+  .grille4{grid-template-columns:1fr 1fr}
+  .grille4>div{padding:22px 14px 22px 0}
+  .grille4>div:nth-child(2n){border-left:1px solid var(--trait);padding-left:14px;padding-right:0}
+  .grille4>div:nth-child(3){border-left:0;padding-left:0}
+  .grille4>div:nth-child(n+3){border-top:1px solid var(--trait)}
+  .reponses .grille4 .chiffre{font-size:clamp(30px,10vw,44px)}
+  .reponses .grille4 .detail{margin-top:10px;font-size:14px;max-width:none}
 }
 
 @media (prefers-reduced-motion:reduce){
