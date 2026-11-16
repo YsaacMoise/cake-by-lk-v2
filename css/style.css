@@ -30,7 +30,7 @@ img{display:block;max-width:100%}
 .entete.plein{background:rgba(246,241,234,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--trait);padding-top:12px;padding-bottom:12px}
 .marque{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;padding:6px 0}
 .logo{font-size:22px;font-weight:400;letter-spacing:.5px;display:inline-flex;align-items:center;gap:4px}
-.logo i{width:8px;height:8px;border-radius:50%;background:var(--blush);display:inline-block}
+.logo i{width:7px;height:7px;border-radius:50%;background:var(--blush);display:inline-block}
 .marque small{font-size:11px;font-weight:400;letter-spacing:1.8px;text-transform:uppercase;color:var(--gris);margin-top:3px}
 .menu{display:flex;align-items:center;gap:34px;font-size:15px;font-weight:400}
 .menu a{text-decoration:none;position:relative}
@@ -264,8 +264,8 @@ img{display:block;max-width:100%}
   .carte .ligne-bas{flex-direction:column;gap:4px}
   .carte .prix{font-size:13px}
   .creations{padding-top:10vh}
-  .filtres{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
-  .filtres .puce{flex:none}
+  .filtres{gap:6px}
+  .filtres .puce{font-size:14px;padding:9px 13px;gap:6px}
   .galerie{grid-template-columns:1fr 1fr;gap:10px}
   .galerie>li.grand{grid-column:1/-1;grid-row:auto}
   .grand .tuile .visuel{aspect-ratio:4/5}
